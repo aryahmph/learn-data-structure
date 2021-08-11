@@ -84,3 +84,23 @@ And the greater the n value the greater the time or step it takes.
 
 ![Big O(n)](docs/linear-big-o.png)
 
+## 4. Square or Big O(n²)
+
+See example code [here.](src/main/java/aryahmph/BigOImpl.java)
+
+```java
+public class BigOImpl implements BigO {
+    public void square(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(i + "," + j);
+            }
+        }
+    }
+}
+```
+
+The above function has the time complexity O(n²), because it will do as many commands as n*n. If square(4) it will
+provide output as follows:
+
+![Big O(n)](docs/square-big-o.png)

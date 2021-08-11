@@ -16,4 +16,13 @@ public class BigOImpl implements BigO {
             System.out.println(i);
         }
     }
+
+    @Override
+    public void square(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(i + "," + j);
+            }
+        }
+    }
 }

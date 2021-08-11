@@ -20,4 +20,9 @@ public class BigOImplTest {
     void TestLinear() {
         bigO.linear(5);
     }
+
+    @Test
+    void TestSquare() {
+        bigO.square(5);
+    }
 }
