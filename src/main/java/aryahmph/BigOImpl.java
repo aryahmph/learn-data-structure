@@ -2,11 +2,18 @@ package aryahmph;
 
 public class BigOImpl implements BigO {
     @Override
-    public void linear(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Step : " + i + 1);
-            System.out.println("Step : " + i + 1);
-            System.out.println("Step : " + i + 1);
+    public void constant() {
+        System.out.println("Learn");
+        System.out.println("Data Structure");
+        int x = 10;
+        x *= 100;
+        System.out.println(x);
+    }
+
+    @Override
+    public void linear(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
         }
     }
 }

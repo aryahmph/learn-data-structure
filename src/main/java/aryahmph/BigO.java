@@ -1,5 +1,6 @@
 package aryahmph;
 
 public interface BigO {
-    void linear(int[] array);
+    void constant();
+    void linear(int n);
 }
