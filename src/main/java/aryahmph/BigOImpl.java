@@ -25,4 +25,14 @@ public class BigOImpl implements BigO {
             }
         }
     }
+
+    @Override
+    public int binarySearch(int[] array, int start, int end, int target) {
+        if (start > end) return -1;
+        int midIdx = (start + end) / 2;
+
+        if (array[midIdx] == target) return midIdx;
+        else if (array[midIdx] > target) return binarySearch(array, start, midIdx - 1, target);
+        else return binarySearch(array, midIdx + 1, end, target);
+    }
 }

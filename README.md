@@ -84,6 +84,46 @@ And the greater the n value the greater the time or step it takes.
 
 ![Big O(n)](docs/linear-big-o.png)
 
+## 3 O(log n)
+
+First, what is logarithm?
+
+![Logarithm](docs/logarithm.png)
+
+The base of logarithm is always taken as 2 in finding time complexity of algorithms, because Conversion between
+logarithm bases is equivalent to multiplying by some constant. Constant multiplication does not affect big O complexity
+class. So the logarithm base has no effect on the analysis.
+
+Source : https://stackoverflow.com/questions/45222185/why-is-that-the-base-of-the-logarithm-is-always-taken-as-2-in-finding-time-comp
+
+Then what is O(log n) mean?
+
+![Olog(n)](docs/o-log-n.png)
+
+<br>
+
+The example of O log(n) is Binary Search :
+
+```java
+public class BigOImpl implements BigO {
+    public int binarySearch(int[] array, int start, int end, int target) {
+        if (start > end) return -1;
+        int midIdx = (start + end) / 2;
+
+        if (array[midIdx] == target) return midIdx;
+        else if (array[midIdx] > target) return binarySearch(array, start, midIdx - 1, target);
+        else return binarySearch(array, midIdx + 1, end, target);
+    }
+}
+```
+
+<br>
+If the array data is {2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, then it would like this :
+
+![Binary Search](docs/Binary-Search.png)
+
+The time complexity is, log 10 = 3, it takes 3 step for Worst Case or Average case, and the best case are O(1).
+
 ## 4. Square or Big O(n²)
 
 See example code [here.](src/main/java/aryahmph/BigOImpl.java)
